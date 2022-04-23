@@ -31,23 +31,29 @@ const Contests = () => {
    
   return (
       <>
-    <Form>
+    <Form style={{textAlign:'center',marginTop:"2%"}}>
 
- <InputGroup>
-      <InputGroup.Text >
+ <InputGroup style={{textAlign:'center',margin: "0 25%"}}>
+    
       <FormControl id='selectRating'
       placeholder="difficulty (800-3500)"
       aria-label="difficulty"
       aria-describedby="basic-addon1"
+      style={{maxWidth:'300px',outline:'none'}}
       name="tag"
       value={search.tag}
       onChange={handleChange}
     />
-      </InputGroup.Text>
-   
-    <Form.Select id='selectTag' name="rating" value={search.rating} onChange={handleChange}>
     
-    <option value="Add Tag">Add Tag:</option>
+   
+    <Form.Select 
+    id='selectTag' 
+    name="rating"
+     style={{maxWidth:"600px",textAlign:'center'}} 
+     value={search.rating} 
+     onChange={handleChange}>
+    
+    <option  value="Add Tag">Add Tag:</option>
              combine-tags-by-or
              <option value="combine-tags-by-or" title="*combine tags by OR">*combine tags by OR</option>
                  <option  value="2-sat" title="2-satisfiability">2-sat</option>
@@ -87,7 +93,7 @@ const Contests = () => {
                  <option  value="trees" title="Trees">trees</option>
                  <option  value="two pointers" title="Two pointers">two pointers</option>
     </Form.Select>
-    <Button onClick={handleClick} >Apply</Button>
+    <Button onClick={handleClick} style={{padding:"5px 50px"}}>Apply</Button>
     </InputGroup>
     </ Form>
     {apply && <GetProblem tag={search.tag} rating={search.rating} />}

@@ -12,20 +12,13 @@ let ns={
   "text-color-dark":"#2b616d" 
 }
 const NavbarSec = (props) => {
-  // const [problem, setProblem] = React.useState(false);
-  // const [contest, setContest] = React.useState(false);
-  // const handleContests =()=>{
-  //    problem===true?setProblem(false):setProblem(true);
-  // }
-  // const handleProblems =()=>{
-  //     contest===true?setContest(false):setContest(true);
-  // }
+   
     return (
  <div>
 
 <Navbar className='navbar' style={{backgroundColor:ns['bg-color-dark']}}  >
   <Container>
-    <Navbar.Brand  style = { {color:ns['imp-color']}}href="#home">vCode</Navbar.Brand>
+    <Navbar.Brand  style = { {color:ns['imp-color']}}href="/home">vCode</Navbar.Brand>
     <Button  onClick={props.handleBtnClick}>New User / Login</Button>
   </Container>
 </Navbar>
@@ -34,14 +27,13 @@ const NavbarSec = (props) => {
   <Container>
     <Navbar.Brand href="#home"></Navbar.Brand>
     <Nav className="me-auto nav_class">
-      <Nav.Link className='nav_item_class' href="#home">Home</Nav.Link>
+      <Nav.Link className='nav_item_class' href="/home">Home</Nav.Link>
       <NavDropdown className='nav_item_class' title="Practice" id="navbarScrollingDropdown">
       <NavDropdown.Item href="/contests" >  Contests</NavDropdown.Item> 
+      <NavDropdown.Divider />
         <NavDropdown.Item href="/problems" >Problems</NavDropdown.Item> 
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action5">
-          Something else here
-        </NavDropdown.Item>
+       
+       
       </NavDropdown>
       <Nav.Link className='nav_item_class' href="#discuss">Discuss</Nav.Link>
       <NavDropdown className='nav_item_class' title="Visualiser" id="navbarScrollingDropdown">
@@ -50,20 +42,20 @@ const NavbarSec = (props) => {
         <NavDropdown.Item href="/compare">Compare</NavDropdown.Item>
       </NavDropdown>
       <NavDropdown className='nav_item_class' title="Learn" id="navbarScrollingDropdown">
-        <NavDropdown.Item  href="#action3">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+        <NavDropdown.Item  href="/tutorials">Tutorials</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action5">
+        <NavDropdown.Item href="/Resources">Resources</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item href="/blogs">Blogs</NavDropdown.Item>
+      
+        {/* <NavDropdown.Item href="#action5">
           Something else here
-        </NavDropdown.Item>
+        </NavDropdown.Item> */}
       </NavDropdown>
       <NavDropdown className='nav_item_class' title="More" id="navbarScrollingDropdown">
-        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
+        <NavDropdown.Item href="/about">About us</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item href="#action5">
-          Something else here
-        </NavDropdown.Item>
+      
       </NavDropdown>
     </Nav>
   </Container>

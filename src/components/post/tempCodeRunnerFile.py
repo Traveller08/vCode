@@ -1,0 +1,8 @@
+py.press('enter')
+py.hotkey('ctrl','a')
+py.hotkey('ctrl','c')
+py.press('tab',presses=2)
+py.press('enter')
+py.press('tab',presses=2)
+py.hotkey('ctrl','v')
+py.press('left_arrow',presses=2)

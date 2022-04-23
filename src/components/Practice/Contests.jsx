@@ -19,12 +19,13 @@ const Problems = () => {
     }
 
   return (
-      <>
-     <InputGroup>
+      <Form style={{textAlign:'center',marginTop:"2%"}}>
+     <InputGroup style={{textAlign:'center',margin: "0 40%"}}>
     <Form.Select
       name="contest"
       value={contest}
       onChange={handleChange}
+      style={{maxWidth:'300px',outline:'none'}}
     >
     <option value="Select contest">Select contest :</option>
                  <option value="Div. 1" title="Div 1">Div. 1</option>
@@ -40,7 +41,7 @@ const Problems = () => {
   <Button onClick={handleClick}>Apply</Button>
   </InputGroup>
     {apply && <GetContest type={contest} />}
-  </>
+  </ Form>
   )
 }
 

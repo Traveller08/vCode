@@ -17,14 +17,15 @@ const Auth = () => {
     }
 
     return (
-        <div>
+        <>
+        <div style={{textAlignment:"center",margin:"0 5%"}}>
             <Button variant="secondary" onClick={handleClick}>SignUp</Button>
             <Button variant="light" onClick={handleClick2}>Login</Button>
-
+            </div>
             {login === true ? <Login /> : <SignUp />}
             
-            
-        </div>
+            </>
+      
     );
 };
 

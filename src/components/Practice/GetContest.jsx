@@ -25,8 +25,8 @@ const checkContest =(data,type)=>{
 }
 
 const GetContest = (props) => {
-  //console.log("entered getContest");
-//  console.log(props);
+  console.log("entered getContest");
+  console.log(props);
     const [contest, setContest] = useState([]);
     const [loading, setLoading] = useState(200);
    
